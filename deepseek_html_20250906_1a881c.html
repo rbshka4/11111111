@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вкусное искусство — Кулинарные курсы для всех</title>
+    <meta name="description" content="Научитесь готовить как профессиональный шеф-повар на наших кулинарных курсах">
+    
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" as="font" crossorigin>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #E27D60;
+            --primary-dark: #C56A4F;
+            --primary-light: #F28C71;
+            --accent: #85CDCA;
+            --accent-dark: #67B0AC;
+            --dark: #2C3E50;
+            --darker: #1A252F;
+            --light: #F9F9F9;
+            --gray: #95A5A6;
+            --gray-dark: #7F8C8D;
+            
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.16);
+            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.25);
+            --shadow-xl: 0 35px 50px rgba(0, 0, 0, 0.3);
+            
+            --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-fast: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-slow: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        /* ===== Typography ===== */
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+        }
+
+        h3 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+        }
+
+        h4 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--gray-dark);
+            font-weight: 400;
+        }
+
+        .text-lead {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        /* ===== Layout ===== */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section--light {
+            background-color: var(--light);
+        }
+
+        .section--accent {
+            background-color: rgba(133, 205, 202, 0.1);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .text-accent {
+            color: var(--accent);
+        }
+
+        .text-dark {
+            color: var(--dark);
+        }
+
+        .text-gray {
+            color: var(--gray);
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mb-1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+
+        .mb-5 {
+            margin-bottom: 3rem;
+        }
+
+        /* ===== Buttons ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 2.25rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            transition: var(--transition);
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn--primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn--primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn--primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            opacity: 0;
+            z-index: -1;
+            transition: var(--transition);
+        }
+
+        .btn--primary:hover::before {
+            opacity: 1;
+        }
+
+        .btn--accent {
+            background: var(--gradient-accent);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn--accent:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn--outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            box-shadow: none;
+        }
+
+        .btn--outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn--lg {
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* ===== Header ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(249, 249, 249, 0.98);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(226, 125, 96, 0.1);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-lg);
+            border-bottom-color: rgba(226, 125, 96, 0.2);
+        }
+
+        .header__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 90px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            color: var(--primary);
+        }
+
+        .logo__icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav__item {
+            position: relative;
+        }
+
+        .nav__link {
+            font-weight: 600;
+            color: var(--dark);
+            opacity: 0.9;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav__link:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        .nav__link i {
+            font-size: 0.875rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 0.5rem;
+            background-color: rgba(226, 125, 96, 0.1);
+            color: var(--dark);
+            font-size: 1.25rem;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background-color: rgba(226, 125, 96, 0.2);
+            color: var(--primary);
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 90px;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--light);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle, rgba(226, 125, 96, 0.1) 1px, transparent 1px),
+                radial-gradient(circle, rgba(133, 205, 202, 0.1) 1px, transparent 1px),
+                radial-gradient(circle, rgba(242, 140, 113, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px, 60px 60px, 80px 80px;
+            background-position: 0 0, 20px 20px, 40px 40px;
+            opacity: 0.7;
+            z-index: 1;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+        }
+
+        .hero__title {
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .hero__title span {
+            color: var(--primary);
+        }
+
+        .hero__text {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        .hero__buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero__image {
+            position: absolute;
+            right: -5%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            max-width: 700px;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero__stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .hero__stat {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hero__stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(226, 125, 96, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        .hero__stat-content h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+            color: var(--dark);
+        }
+
+        .hero__stat-content p {
+            font-size: 0.875rem;
+            margin-bottom: 0;
+            color: var(--gray);
+        }
+
+        /* ===== Features ===== */
+        .features {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(226, 125, 96, 0.05) 0%, rgba(226, 125, 96, 0) 70%);
+            animation: rotate 30s linear infinite;
+            z-index: 1;
+        }
+
+        .features__container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .features__header {
+            max-width: 700px;
+            margin: 0 auto 5rem;
+            text-align: center;
+        }
+
+        .features__header h2 span {
+            color: var(--primary);
+        }
+
+        .features__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            transition: var(--transition);
+            border: 1px solid rgba(226, 125, 96, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(226, 125, 96, 0.3);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(226, 125, 96, 0.05), rgba(226, 125, 96, 0));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-card__icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: white;
+            font-size: 1.75rem;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-card__title {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .feature-card__text {
+            margin-bottom: 2rem;
+        }
+
+        .feature-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .feature-card__link:hover {
+            color: var(--primary-light);
+            gap: 0.75rem;
+        }
+
+        /* ===== Courses ===== */
+        .courses {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(249, 249, 249, 0.9));
+            position: relative;
+        }
+
+        .courses::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e27d60' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .courses__header {
+            max-width: 700px;
+            margin: 0 auto 5rem;
+            text-align: center;
+        }
+
+        .courses__header h2 span {
+            color: var(--accent);
+        }
+
+        .courses__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            border: 1px solid rgba(133, 205, 202, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(133, 205, 202, 0.3);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(133, 205, 202, 0.05), rgba(133, 205, 202, 0));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .course-card:hover::before {
+            opacity: 1;
+        }
+
+        .course-card__image {
+            width: 100%;
+            height: 200px;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .course-card:hover .course-card__image img {
+            transform: scale(1.05);
+        }
+
+        .course-card__title {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .course-card__info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .course-card__description {
+            margin-bottom: 2rem;
+            color: var(--gray-dark);
+        }
+
+        .course-card__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .course-card__price {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        /* ===== Testimonials ===== */
+        .testimonials {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(249, 249, 249, 0.9));
+            position: relative;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,20 L80,20 L80,80 L20,80 Z' fill='none' stroke='%2385CDCA' stroke-width='0.5' stroke-opacity='0.1'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        .testimonials__header {
+            max-width: 700px;
+            margin: 0 auto 5rem;
+            text-align: center;
+        }
+
+        .testimonials__header h2 span {
+            color: var(--accent-dark);
+        }
+
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            border: 1px solid rgba(247, 37, 133, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(247, 37, 133, 0.3);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            font-size: 8rem;
+            font-weight: 800;
+            color: rgba(133, 205, 202, 0.05);
+            line-height: 1;
+            z-index: 1;
+        }
+
+        .testimonial-card__content {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 2rem;
+            font-style: italic;
+            font-size: 1.125rem;
+            color: var(--dark);
+        }
+
+        .testimonial-card__author {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .testimonial-card__avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--primary);
+        }
+
+        .testimonial-card__avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-card__info h4 {
+            margin-bottom: 0.25rem;
+            color: var(--dark);
+        }
+
+        .testimonial-card__info p {
+            font-size: 0.875rem;
+            color: var(--gray);
+            margin-bottom: 0;
+        }
+
+        /* ===== Pricing ===== */
+        .pricing {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='1' fill='%23F72585' fill-opacity='0.1'/%3E%3C/svg%3E");
+            background-size: 40px 40px;
+            opacity: 0.3;
+        }
+
+        .pricing__header {
+            max-width: 700px;
+            margin: 0 auto 5rem;
+            text-align: center;
+        }
+
+        .pricing__header h2 span {
+            color: var(--primary);
+        }
+
+        .pricing__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            transition: var(--transition);
+            border: 1px solid rgba(226, 125, 96, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card--popular {
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(133, 205, 202, 0.2);
+        }
+
+        .pricing-card--popular::before {
+            content: 'Популярный';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gradient-accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 1rem;
+            border-radius: 2rem;
+        }
+
+        .pricing-card__header {
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card__title {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card__price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card__price span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .pricing-card__description {
+            margin-bottom: 2rem;
+            color: var(--gray);
+        }
+
+        .pricing-card__features {
+            margin-bottom: 3rem;
+        }
+
+        .pricing-card__feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card__feature i {
+            color: var(--primary);
+            font-size: 0.875rem;
+        }
+
+        .pricing-card__feature p {
+            margin-bottom: 0;
+            font-size: 0.9375rem;
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .cta__container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cta__content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta__title {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta__text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,20 L80,20 L80,80 L20,80 Z' fill='none' stroke='%23F72585' stroke-width='0.5' stroke-opacity='0.1'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        .faq__header {
+            max-width: 700px;
+            margin: 0 auto 5rem;
+            text-align: center;
+        }
+
+        .faq__header h2 span {
+            color: var(--accent-dark);
+        }
+
+        .faq__grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(226, 125, 96, 0.1);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-item__question {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .faq-item__question:hover {
+            background: rgba(226, 125, 96, 0.05);
+        }
+
+        .faq-item__question i {
+            transition: var(--transition);
+        }
+
+        .faq-item__answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            padding: 0 2rem;
+        }
+
+        .faq-item.active .faq-item__question {
+            background: rgba(226, 125, 96, 0.1);
+        }
+
+        .faq-item.active .faq-item__question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-item__answer {
+            max-height: 500px;
+            padding: 0 2rem 2rem;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background-color: var(--darker);
+            padding: 6rem 0 3rem;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer__col:first-child {
+            max-width: 350px;
+        }
+
+        .footer__logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--light);
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer__text {
+            margin-bottom: 2rem;
+            color: var(--gray);
+        }
+
+        .footer__social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer__social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            font-size: 1.125rem;
+            transition: var(--transition);
+        }
+
+        .footer__social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        .footer__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer__title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-primary);
+        }
+
+        .footer__links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer__link {
+            color: var(--gray);
+            transition: var(--transition);
+        }
+
+        .footer__link:hover {
+            color: var(--primary);
+            padding-left: 0.5rem;
+        }
+
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer__copyright {
+            color: var(--gray-dark);
+            font-size: 0.875rem;
+        }
+
+        .footer__legal-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer__legal-link {
+            color: var(--gray);
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .footer__legal-link:hover {
+            color: var(--primary);
+        }
+
+        /* ===== Animations ===== */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(-50%) translateX(0);
+            }
+            50% {
+                transform: translateY(-50%) translateX(-10px);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 1200px) {
+            .hero__image {
+                right: -10%;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero__image {
+                right: -15%;
+                max-width: 500px;
+                opacity: 0.7;
+            }
+
+            .features__grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 6rem 0;
+            }
+
+            .nav {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 90px);
+                background: var(--light);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: var(--transition-slow);
+                overflow-y: auto;
+            }
+
+            .nav.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero__content {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .hero__buttons {
+                justify-content: center;
+            }
+
+            .hero__image {
+                position: relative;
+                top: auto;
+                right: auto;
+                transform: none;
+                margin: 3rem auto 0;
+                max-width: 400px;
+                opacity: 1;
+            }
+
+            .hero__stats {
+                flex-direction: column;
+                gap: 1.5rem;
+                margin-top: 3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .section {
+                padding: 4rem 0;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .features__grid,
+            .testimonials__grid,
+            .pricing__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card,
+            .testimonial-card,
+            .pricing-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <i class="fas fa-utensils logo__icon"></i>
+                <span>Вкусное искусство</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <div class="nav__item">
+                    <a href="#courses" class="nav__link">Курсы</a>
+                </div>
+                <div class="nav__item">
+                    <a href="#features" class="nav__link">Преимущества</a>
+                </div>
+                <div class="nav__item">
+                    <a href="#testimonials" class="nav__link">Отзывы</a>
+                </div>
+                <div class="nav__item">
+                    <a href="#pricing" class="nav__link">Цены</a>
+                </div>
+                <div class="nav__item">
+                    <a href="#faq" class="nav__link">FAQ</a>
+                </div>
+                <div class="nav__item">
+                    <a href="#cta" class="btn btn--primary">Записаться</a>
+                </div>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Научитесь готовить <span>как шеф-повар</span> дома</h1>
+                <p class="hero__text">Освойте кулинарное искусство с нашими курсами под руководством профессиональных поваров. Готовьте изысканные блюда и удивляйте близких!</p>
+                <div class="hero__buttons btn-group">
+                    <a href="#courses" class="btn btn--accent btn--lg">Выбрать курс</a>
+                    <a href="#features" class="btn btn--outline btn--lg">Узнать больше</a>
+                </div>
+                
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <div class="hero__stat-icon">
+                            <i class="fas fa-user-chef"></i>
+                        </div>
+                        <div class="hero__stat-content">
+                            <h4>15+</h4>
+                            <p>Профессиональных поваров</p>
+                        </div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="hero__stat-content">
+                            <h4>5,000+</h4>
+                            <p>Выпускников</p>
+                        </div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="hero__stat-content">
+                            <h4>100%</h4>
+                            <p>Практических занятий</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&h=700&q=80" alt="Кулинарные курсы Вкусное искусство" class="hero__image">
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section features" id="features">
+        <div class="container features__container">
+            <div class="features__header">
+                <h2>Почему выбирают <span>наши курсы</span></h2>
+                <p class="text-lead">Мы предлагаем уникальный подход к обучению кулинарии, который подойдет как новичкам, так и опытным кулинарам</p>
+            </div>
+            
+            <div class="features__grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-chef-hat"></i>
+                    </div>
+                    <h3 class="feature-card__title">Профессиональные шеф-повара</h3>
+                    <p class="feature-card__text">Наши преподаватели - практикующие шеф-повара известных ресторанов с многолетним опытом работы.</p>
+                    <a href="#" class="feature-card__link">
+                        Узнать больше
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="feature-card__title">Практические занятия</h3>
+                    <p class="feature-card__text">80% времени обучения - это практика. Вы готовите сами под чутким руководством наших поваров.</p>
+                    <a href="#" class="feature-card__link">
+                        Узнать больше
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="feature-card__title">Доступность</h3>
+                    <p class="feature-card__text">Обучение проходит в удобное время в современных оборудованных кухнях в центре города.</p>
+                    <a href="#" class="feature-card__link">
+                        Узнать больше
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="feature-card__title">Авторские методички</h3>
+                    <p class="feature-card__text">Каждый студент получает подробные рецепты и методические материалы, которые останутся с вами навсегда.</p>
+                    <a href="#" class="feature-card__link">
+                        Узнать больше
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-egg"></i>
+                    </div>
+                    <h3 class="feature-card__title">Свежие продукты</h3>
+                    <p class="feature-card__text">Все ингредиенты предоставляются школой. Мы работаем только с проверенными поставщиками качественных продуктов.</p>
+                    <a href="#" class="feature-card__link">
+                        Узнать больше
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card__icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="feature-card__title">Сертификат</h3>
+                    <p class="feature-card__text">После окончания курса вы получаете сертификат, подтверждающий ваши новые кулинарные навыки.</p>
+                    <a href="#" class="feature-card__link">
+                        Узнать больше
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="section courses" id="courses">
+        <div class="container">
+            <div class="courses__header">
+                <h2>Наши <span>кулинарные курсы</span></h2>
+                <p class="text-lead">Выберите направление, которое вам интересно, и начните свой путь в мире кулинарии</p>
+            </div>
+            
+            <div class="courses__grid">
+                <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card__image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Итальянская кухня">
+                    </div>
+                    <h3 class="course-card__title">Итальянская кухня</h3>
+                    <div class="course-card__info">
+                        <span><i class="fas fa-clock"></i> 8 занятий</span>
+                        <span><i class="fas fa-user"></i> 10 человек</span>
+                    </div>
+                    <p class="course-card__description">Научитесь готовить настоящую пасту, ризотто, пиццу и другие блюда итальянской кухни.</p>
+                    <div class="course-card__footer">
+                        <div class="course-card__price">12,900 ₽</div>
+                        <a href="#" class="btn btn--primary">Записаться</a>
+                    </div>
+                </div>
+                
+                <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card__image">
+                        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Азиатская кухня">
+                    </div>
+                    <h3 class="course-card__title">Азиатская кухня</h3>
+                    <div class="course-card__info">
+                        <span><i class="fas fa-clock"></i> 10 занятий</span>
+                        <span><i class="fas fa-user"></i> 8 человек</span>
+                    </div>
+                    <p class="course-card__description">Освойте искусство приготовления суши, роллов, вок-блюд и других традиционных азиатских блюд.</p>
+                    <div class="course-card__footer">
+                        <div class="course-card__price">15,500 ₽</div>
+                        <a href="#" class="btn btn--primary">Записаться</a>
+                    </div>
+                </div>
+                
+                <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="course-card__image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Выпечка и десерты">
+                    </div>
+                    <h3 class="course-card__title">Выпечка и десерты</h3>
+                    <div class="course-card__info">
+                        <span><i class="fas fa-clock"></i> 12 занятий</span>
+                        <span><i class="fas fa-user"></i> 6 человек</span>
+                    </div>
+                    <p class="course-card__description">Научитесь готовить торты, пирожные, эклеры и другие десерты как в лучших кондитерских.</p>
+                    <div class="course-card__footer">
+                        <div class="course-card__price">18,700 ₽</div>
+                        <a href="#" class="btn btn--primary">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials__header">
+                <h2>Отзывы <span>наших студентов</span></h2>
+                <p class="text-lead">Более 5,000 выпускников уже научились готовить с нами и делятся своими впечатлениями</p>
+            </div>
+            
+            <div class="testimonials__grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card__content">
+                        "Прошла курс итальянской кухни и в восторге! Теперь готовлю пасту и ризотто как в лучших ресторанах. Преподаватели - настоящие профессионалы, объясняют все очень доступно."
+                    </div>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Марина К.">
+                        </div>
+                        <div class="testimonial-card__info">
+                            <h4>Марина К.</h4>
+                            <p>Курс: Итальянская кухня</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card__content">
+                        "Никогда не думал, что смогу готовить суши дома. После курса азиатской кухни удивляю друзей и семью своими кулинарными навыками. Очень понравился практический подход к обучению."
+                    </div>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">
+                            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Алексей С.">
+                        </div>
+                        <div class="testimonial-card__info">
+                            <h4>Алексей С.</h4>
+                            <p>Курс: Азиатская кухня</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card__content">
+                        "Курс по выпечке превзошел все ожидания! Теперь домашние десерты - мой конек. Отдельное спасибо за подробные рецепты и советы по оформлению блюд."
+                    </div>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">
+                            <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Ольга П.">
+                        </div>
+                        <div class="testimonial-card__info">
+                            <h4>Ольга П.</h4>
+                            <p>Курс: Выпечка и десерты</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="pricing__header">
+                <h2>Стоимость <span>обучения</span></h2>
+                <p class="text-lead">Выберите подходящий вариант для комфортного обучения</p>
+            </div>
+            
+            <div class="pricing__grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__title">Базовый</h3>
+                        <div class="pricing-card__price">12,900 <span>руб.</span></div>
+                        <p class="pricing-card__description">Идеально для знакомства с кулинарией</p>
+                    </div>
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>8 практических занятий</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Все необходимые ингредиенты</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Рецепты в электронном виде</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-times"></i>
+                            <p>Индивидуальная консультация</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-times"></i>
+                            <p>Сертификат об окончании</p>
+                        </div>
+                    </div>
+                    <a href="#cta" class="btn btn--outline" style="width: 100%;">Записаться</a>
+                </div>
+                
+                <div class="pricing-card pricing-card--popular" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__title">Стандарт</h3>
+                        <div class="pricing-card__price">15,500 <span>руб.</span></div>
+                        <p class="pricing-card__description">Наиболее популярный вариант</p>
+                    </div>
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>10 практических занятий</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Все необходимые ингредиенты</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Рецепты в электронном виде</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Индивидуальная консультация</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Сертификат об окончании</p>
+                        </div>
+                    </div>
+                    <a href="#cta" class="btn btn--primary" style="width: 100%;">Записаться</a>
+                </div>
+                
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__title">Премиум</h3>
+                        <div class="pricing-card__price">18,700 <span>руб.</span></div>
+                        <p class="pricing-card__description">Для максимального погружения</p>
+                    </div>
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>12 практических занятий</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Все необходимые ингредиенты</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Печатная книга рецептов</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Индивидуальная консультация</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <i class="fas fa-check"></i>
+                            <p>Подарочный сертификат</p>
+                        </div>
+                    </div>
+                    <a href="#cta" class="btn btn--outline" style="width: 100%;">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta" id="cta">
+        <div class="container cta__container">
+            <div class="cta__content">
+                <h2 class="cta__title">Готовы начать?</h2>
+                <p class="cta__text">Запишитесь на пробный урок и получите скидку 10% на любой курс</p>
+                <div class="btn-group" style="justify-content: center;">
+                    <a href="#" class="btn btn--accent btn--lg">Записаться на пробный урок</a>
+                    <a href="#courses" class="btn btn--outline btn--lg">Посмотреть курсы</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="faq__header">
+                <h2>Частые <span>вопросы</span></h2>
+                <p class="text-lead">Ответы на самые популярные вопросы о наших кулинарных курсах</p>
+            </div>
+            
+            <div class="faq__grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-item__question">
+                        <span>Нужно ли иметь опыт в готовке?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Нет, наши курсы рассчитаны как на новичков, так и на тех, кто уже имеет опыт в кулинарии. Преподаватели адаптируют программу под уровень группы.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-item__question">
+                        <span>Нужно ли приносить свои продукты?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Нет, все необходимые продукты и оборудование предоставляются школой. Вам нужно только прийти в удобной одежде и с хорошим настроением.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-item__question">
+                        <span>Можно ли посетить пробное занятие?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Да, мы регулярно проводим пробные уроки, где вы можете познакомиться с преподавателем, методикой обучения и атмосферой нашей кулинарной школы.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-item__question">
+                        <span>Что если я пропущу занятие?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Вы можете отработать пропущенное занятие в другой группе при наличии свободных мест или получить видеозапись урока и консультацию преподавателя.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-item__question">
+                        <span>Можно ли получить налоговый вычет?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Да, наша школа имеет лицензию на образовательную деятельность, поэтому вы можете получить налоговый вычет за обучение.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="#" class="footer__logo">Вкусное искусство</a>
+                    <p class="footer__text">Кулинарная школа для тех, кто хочет научиться готовить как профессиональный шеф-повар. Работаем с 2015 года.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Курсы</h3>
+                    <div class="footer__links">
+                        <a href="#courses" class="footer__link">Итальянская кухня</a>
+                        <a href="#courses" class="footer__link">Азиатская кухня</a>
+                        <a href="#courses" class="footer__link">Выпечка и десерты</a>
+                        <a href="#courses" class="footer__link">Все курсы</a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Школа</h3>
+                    <div class="footer__links">
+                        <a href="#" class="footer__link">О нас</a>
+                        <a href="#" class="footer__link">Преподаватели</a>
+                        <a href="#" class="footer__link">Галерея</a>
+                        <a href="#" class="footer__link">Контакты</a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Поддержка</h3>
+                    <div class="footer__links">
+                        <a href="#faq" class="footer__link">FAQ</a>
+                        <a href="#" class="footer__link">Политика конфиденциальности</a>
+                        <a href="#" class="footer__link">Договор оферты</a>
+                        <a href="#" class="footer__link">Подарочные сертификаты</a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <div class="footer__links">
+                        <a href="mailto:info@vkusnoe-iskusstvo.ru" class="footer__link">info@vkusnoe-iskusstvo.ru</a>
+                        <a href="tel:+74951234567" class="footer__link">+7 (495) 123-45-67</a>
+                        <a href="#" class="footer__link">Москва, ул. Кулинарная, 15</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2023 Вкусное искусство. Все права защищены.</p>
+                <div class="footer__legal-links">
+                    <a href="#" class="footer__legal-link">Политика конфиденциальности</a>
+                    <a href="#" class="footer__legal-link">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = nav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-item__question');
+            
+            question.addEventListener('click', () => {
+                const currentlyActive = document.querySelector('.faq-item.active');
+                
+                if (currentlyActive && currentlyActive !== item) {
+                    currentlyActive.classList.remove('active');
+                }
+                
+                item.classList.toggle
